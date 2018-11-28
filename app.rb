@@ -19,6 +19,16 @@ get "/contacts" do
   erb :index
 end
 
+class Vessel_Operation__c < ActiveRecord::Base
+  self.table_name = 'salesforce.Vessel_Operation__c'
+end
+
+get "/vessel_operations" do
+  @vessel_operations = Vessel_Operation__c.all
+  erb :index
+end
+
+
 get "/create" do
   dashboard_url = 'https://dashboard.heroku.com/'
   match = /(.*?)\.herokuapp\.com/.match(request.host)
