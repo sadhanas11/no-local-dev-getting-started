@@ -20,7 +20,7 @@ get "/contacts" do
 end
 
 class Vessel_Operation__c < ActiveRecord::Base
-  self.table_name = 'salesforce.Vessel_Operation__c'
+  self.table_name = 'salesforce.Vessel_Operation'
 end
 
 get "/vessel_operations" do
